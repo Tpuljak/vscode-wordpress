@@ -2,7 +2,7 @@ version: '3'
 services:
   wp:
     build:
-      context: .devcontainer/
+      context: .
     volumes:
       - www_html:/var/www/html
       - db_exchange:/db_exchange
