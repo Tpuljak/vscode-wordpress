@@ -5,6 +5,7 @@
 	"service": "wp",
 
 	"workspaceFolder": "/workspace",
+  "workspaceMount": "type=bind,source=/workspace,target=/workspace",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
@@ -40,7 +41,7 @@
 	// Uncomment the next line if you want to keep your containers running after VS Code shuts down.
 	// "shutdownAction": "none",
 	
-	"postCreateCommand": "sudo chown -R vscode:vscode . && ln -s /var/www/html /workspaces/vscode-wordpress",
+	"postCreateCommand": "sudo chown -R vscode:vscode . && mkdir -p /workspace/vscode-wordpress && ln -s /var/www/html /workspace/vscode-wordpress",
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
