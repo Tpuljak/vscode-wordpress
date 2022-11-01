@@ -1,4 +1,4 @@
-ARG WP_VER='latest'
+ARG WP_VER=latest
 FROM wordpress:${WP_VER}
 
 ARG INSTALL_ZSH true
